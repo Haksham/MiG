@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className=" top-0 left-0 right-0 z-50 shadow-md" style={{ backgroundColor: '#292420', color: '#faefdd ' }}>
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="container mx-auto md:px-6 py-4 flex justify-between items-center">
         {/* Logo on the left */}
         <div className="flex items-center">
           <img 
@@ -12,7 +12,7 @@ export default function Header() {
         </div>
         
         {/* Navigation on the right */}
-        <nav className="flex items-center space-x-8">
+        <nav className="flex items-center md:space-x-8 space-x-4 mr-3 italic">
           <a 
             href="#home" 
             className="hover:font-bold hover:underline transition-colors duration-200 font-medium"
