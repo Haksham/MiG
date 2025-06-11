@@ -11,17 +11,17 @@ const pacifico = Pacifico({
 export default function Home() {
   return (
     <div className="bg-white w-full flex flex-col border-2">
-      <Header />
-      <div className="md:h-145 flex pt-10 md:pt-18 justify-center" style={{ backgroundColor: '#faefdd' }}>
-        <img src="/compassbg.png" alt="Corner decoration" className="absolute hidden sm:block rotate-45 animate-spin top-15 left-5 w-64 h-64 object-cover" style={{animationDuration: '148s'}}/>
+      {/* <Header /> */}
+      <div className="md:h-153 flex pt-10 md:pt-18 justify-center" style={{ backgroundColor: '#faefdd' }}>
+        <img src="/compassbg.png" alt="Corner decoration" className="absolute hidden sm:block rotate-45 animate-spin top-15 left-8 w-64 h-64 object-cover" style={{animationDuration: '148s'}}/>
         <img src="/ombg.png" alt="Corner decoration" className="absolute hidden sm:block top-24 rotate-25 left-110 w-34 h-34 object-cover" />
         <img src="/stt.png" alt="Corner decoration" className="absolute hidden sm:block rotate-45 top-25 left-54 w-24 h-24 object-cover" />
         <img src="/stt.png" alt="Corner decoration" className="absolute hidden sm:block top-45 right-54 w-24 h-24 object-cover" />
         <img src="/turbbg.png" alt="Corner decoration" className="absolute hidden sm:block rotate-100 top-75 right-4 w-54 h-54 object-cover" />
         <img src="/ombg.png" alt="Corner decoration" className="absolute hidden sm:block top-24 rotate-25 right-24 w-34 h-34 object-cover" />
-        <img src="/spiralbg.png" alt="Corner decoration" className="absolute hidden sm:block -bottom-14 rotate-25 left-24 w-34 h-34 object-cover" />
+        <img src="/spiralbg.png" alt="Corner decoration" className="absolute hidden sm:block -bottom-24 rotate-25 left-14 w-34 h-34 object-cover" />
         <img src="/star-removebg-preview.png" alt="Corner decoration" className="absolute hidden sm:block rotate-145  bottom-24 left-24 w-24 h-24 object-cover" />
-        <img src="/sun.png" alt="Corner decoration" className="absolute hidden sm:block -bottom-24 right-6 w-44 h-44 animate-spin object-cover -scale-x-100" style={{animationDuration: '200s'}}/>
+        <img src="/sun.png" alt="Corner decoration" className="absolute hidden sm:block -bottom-24 right-10 w-44 h-44 animate-spin object-cover -scale-x-100" style={{animationDuration: '200s'}}/>
         <div className="flex flex-col items-center text-center">
           <p className={`${pacifico.className} text-4xl font-bold mb-6`}><span className="text-5xl md:text-8xl"> Mithira Grace </span><br/> <br/>Working through the night to bring wise ideas to light. <br></br> Creative UI/UX Designer.</p>
           <p className="items-left text-left text-lg space-y-0">
@@ -31,6 +31,7 @@ export default function Home() {
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> New design trends and tools excite me and fuel my growth.</span>
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> Every project is an opportunity to learn something new.</span>
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> I strive to design with empathy, purpose, and clarity.</span>
+              <a href="https://furtive-impulse-6ee.notion.site/Mithira-Grace-1e562afa4f4380f3ad86ed5d27be5054" className="text-center italic underline" target="_blank"><p className="hover:scale-110 transition-transform duration-300">View more info --&gt;&gt;</p></a>
           </p>
         </div>
       </div>
@@ -38,7 +39,7 @@ export default function Home() {
         backgroundImage: 'url(/map.png)'
        }}>
         <div className="text-center m-5 px-5 md:px-15 border-1 md:h-240 md:w-full w-73">
-          <div style={{color: '#faefdd '}} className={`${pacifico.className} md:h-35 text-4xl my-5 md:text-5xl flex items-center justify-center`}>Feature work</div>
+          <div style={{color: '#faefdd '}} className={`${pacifico.className} md:h-33 text-4xl my-5 md:text-5xl flex items-center justify-center`}>Feature work</div>
           <div className="md:grid md:grid-cols-3 gap-4 place-items-center">
             <div className="md:w-80 md:h-60 w-60 h-50  border-1 mb-5 flex items-center justify-center">
              <a href="https://www.figma.com/design/vWHAEDuNj9wFVYyKk3MxNn/MAHINDRA?node-id=0-1&t=WrIVMl4uCNhzXquV-1" target="_blank"><div className="hover:scale-109 transition-transform duration-300 bg-cover md:h-50 md:w-70 h-43 w-50" style={{backgroundImage: 'url(/mahendra2.jpg)',backgroundColor: '#faefdd'}}></div></a> 
@@ -59,7 +60,7 @@ export default function Home() {
               <a href="https://www.figma.com/design/0mgM0IouXCkPxPZvZRmLkr/ICE-CREAM-DUPLICATE?node-id=0-1&t=rnvOvCl5ZT7bdZUi-1" target="_blank"><div className="hover:scale-109 transition-transform duration-300 bg-cover md:h-50 md:w-70 h-43 w-50" style={{backgroundImage: 'url(/ice.jpg)',backgroundColor: '#faefdd'}}></div></a> 
             </div>
           </div>
-          <div className="text-lg text-left space-y-3 mt-5 flex flex-col" style={{color: '#faefdd '}}>
+          <div className="text-lg text-left space-y-1 mt-2 flex flex-col" style={{color: '#faefdd '}}>
             <p><span className="text-4xl mr-2">➼</span>My design Gallery, a curated collection of my work across UI/UX, graphic, and digital design.</p>
             <p><span className="text-4xl mr-2">➼</span>Each project showcases my creative process—from research and ideation to final execution.</p>
             <p><span className="text-4xl mr-2">➼</span>You'll find a variety of projects including mobile apps, websites, branding concepts, digital illustrations, and more. </p>
@@ -120,7 +121,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Header />
+      {/* <Header /> */}
     </div>
   );
 }
