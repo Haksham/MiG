@@ -24,15 +24,22 @@ export default function Home() {
         <img src="/sun.png" alt="Corner decoration" className="absolute hidden sm:block -bottom-24 right-10 w-44 h-44 animate-spin object-cover -scale-x-100" style={{animationDuration: '200s'}}/>
         <div className="flex flex-col items-center text-center">
           <p className={`${pacifico.className} text-4xl font-bold mb-6`}><span className="text-5xl md:text-8xl"> Mithira Grace </span><br/> <br/>Working through the night to bring wise ideas to light. <br></br> Creative UI/UX Designer.</p>
-          <p className="items-left text-left text-lg space-y-0">
+          <div className="items-left text-left text-lg space-y-0">
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> Design for me is about solving problems through intuitive and meaningful experiences.</span>
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> I love turning complex ideas into clean, user-friendly interfaces.</span>
               <span className="flex items-center hidden sm:block"><span className="text-4xl mr-2">➼</span> My work blends functionality with aesthetics to create thoughtful digital products.</span>
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> New design trends and tools excite me and fuel my growth.</span>
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> Every project is an opportunity to learn something new.</span>
               <span className="flex items-start md:items-center"><span className="text-4xl mr-2">➼</span> I strive to design with empathy, purpose, and clarity.</span>
-              <a href="https://furtive-impulse-6ee.notion.site/Mithira-Grace-1e562afa4f4380f3ad86ed5d27be5054" className="text-center italic underline" target="_blank"><p className="hover:scale-110 transition-transform duration-300">View more info --&gt;&gt;</p></a>
-          </p>
+              <a
+                href="https://furtive-impulse-6ee.notion.site/Mithira-Grace-1e562afa4f4380f3ad86ed5d27be5054"
+                className="text-center italic underline inline-block hover:scale-110 transition-transform duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View more info --&gt;&gt;
+              </a>
+          </div>
         </div>
       </div>
       <div className="md:h-330 flex text-white items-center justify-center" style={{ backgroundColor: '#292420',
