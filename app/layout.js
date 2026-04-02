@@ -7,6 +7,7 @@ import Home from './page';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
+import CanvaLinks from './components/CanvaLinks';
 import Footer from './components/Footer';
 
 const roboto = Roboto({
@@ -29,6 +30,8 @@ export default function RootLayout() {
         return <Home />;
       case 'projects':
         return <Projects />;
+      case 'canva':
+        return <CanvaLinks />;
       case 'resume':
         return <Resume />;
       case 'contact':
@@ -43,8 +46,7 @@ export default function RootLayout() {
       <body className={`${roboto.className} p-4 md:p-6`} style={{ backgroundColor: '#f0d09a', color: '#333' }}>
         <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
         {renderPage()}
-        <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        {/* <Footer/> */}
+        <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </body>
     </html>
   );

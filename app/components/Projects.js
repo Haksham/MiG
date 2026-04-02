@@ -1,6 +1,6 @@
 "use client";
 import { Pacifico } from 'next/font/google';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const pacifico = Pacifico({
   weight: '400',
@@ -76,7 +76,7 @@ export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
-  useState(() => {
+  useEffect(() => {
     if (selectedCategory === "All") {
       setFilteredProjects(projects);
     } else {
@@ -85,7 +85,7 @@ export default function Projects() {
   }, [selectedCategory]);
 
   return (
-    <div className="bg-white w-full flex flex-col border-2">
+    <div className="bg-white/80 w-full flex flex-col border-2">
       <div className="min-h-screen py-10" style={{ backgroundColor: '#faefdd' }}>
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           {/* Header Section */}
@@ -105,10 +105,10 @@ export default function Projects() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 font-medium ${
+                className={`px-6 py-3 transition-all duration-300 font-medium border ${
                   selectedCategory === category
-                    ? 'bg-gray-800 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                    ? 'bg-gray-800 text-white shadow-lg border-gray-800'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-300'
                 }`}
               >
                 {category}
@@ -121,32 +121,33 @@ export default function Projects() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                className="bg-white/90 shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl border border-gray-200"
               >
                 {/* Project Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-64 overflow-hidden bg-center bg-cover">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 bg-[#f0d09a]"
+                    onError={(e) => { e.currentTarget.src = '/mob.jpg'; }}
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-transparent hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-white text-gray-800 px-6 py-2 rounded-full font-medium transform translate-y-4 hover:translate-y-0"
+                      className="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-white text-gray-800 px-6 py-2 font-medium transform translate-y-4 hover:translate-y-0 border border-gray-200"
                     >
                       View Project
                     </a>
                   </div>
                   <div className="absolute top-4 left-4">
-                    <span className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-gray-800 text-white px-3 py-1 text-sm font-medium">
                       {project.year}
                     </span>
                   </div>
                   <div className="absolute top-4 right-4">
-                    <span className="bg-white text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-white text-gray-800 px-3 py-1 text-sm font-medium">
                       {project.category}
                     </span>
                   </div>
@@ -166,7 +167,7 @@ export default function Projects() {
                     {project.tools.map((tool, index) => (
                       <span
                         key={index}
-                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                        className="bg-gray-100 text-gray-700 px-3 py-1 text-sm"
                       >
                         {tool}
                       </span>
@@ -192,19 +193,19 @@ export default function Projects() {
 
           {/* Stats Section */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white shadow-lg p-6 text-center border border-gray-200">
               <div className="text-3xl font-bold text-gray-800 mb-2">{projects.length}+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white shadow-lg p-6 text-center border border-gray-200">
               <div className="text-3xl font-bold text-gray-800 mb-2">5+</div>
               <div className="text-gray-600">Design Categories</div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white shadow-lg p-6 text-center border border-gray-200">
               <div className="text-3xl font-bold text-gray-800 mb-2">100%</div>
               <div className="text-gray-600">Client Satisfaction</div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+            <div className="bg-white shadow-lg p-6 text-center border border-gray-200">
               <div className="text-3xl font-bold text-gray-800 mb-2">2024</div>
               <div className="text-gray-600">Latest Work</div>
             </div>
@@ -212,7 +213,7 @@ export default function Projects() {
 
           {/* Call to Action */}
           <div className="mt-16 text-center">
-            <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+            <div className="bg-white shadow-lg p-8 max-w-2xl mx-auto border border-gray-200">
               <h2 className="text-2xl font-bold mb-4 text-gray-800">
                 Like what you see?
               </h2>

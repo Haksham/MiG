@@ -31,6 +31,12 @@ export default function Header({ currentPage, setCurrentPage }) {
             Projects
           </a>
           <a 
+            onClick={() => handleNavClick('canva')}
+            className={`hover:font-bold hover:underline transition-colors duration-200 font-medium cursor-pointer ${currentPage === 'canva' ? 'font-bold underline' : ''}`}
+          >
+            Canva
+          </a>
+          <a 
             onClick={() => handleNavClick('resume')}
             className={`hover:font-bold hover:underline transition-colors duration-200 font-medium cursor-pointer ${currentPage === 'resume' ? 'font-bold underline' : ''}`}
           >

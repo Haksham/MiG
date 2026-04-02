@@ -35,11 +35,42 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="md:h-250 flex text-white items-center justify-center" style={{ backgroundColor: '#292420',
+      <div className="md:h-330 flex text-white items-center justify-center" style={{ backgroundColor: '#292420',
         backgroundImage: 'url(/map.png)'
        }}>
-        <div className="text-center m-5 px-5 md:px-15 border-1 md:h-240 md:w-full w-73">
+        <div className="text-center m-5 px-5 md:px-15 border-1 md:h-330 md:w-full w-73">
           <div style={{color: '#faefdd '}} className={`${pacifico.className} md:h-33 text-4xl my-5 md:text-5xl flex items-center justify-center`}>Feature work</div>
+          {/* Highlighted feature pieces */}
+          <div className="flex flex-col md:flex-row gap-6 mb-6 w-full">
+            <a
+              className="flex-1 min-h-[14rem] md:min-h-[18rem] max-h-[18rem] md:max-h-[22rem] border border-gray-200 overflow-hidden block"
+              href="https://www.figma.com/design/zmw2Z8eUBFny6Jwae047Pn/REDESIGN-SPOTIFY-AI--ARISH-INFRA-PROBLEM-STATEMENT-?node-id=0-1&p=f"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                className="w-full h-full bg-cover bg-center hover:scale-[1.02] transition-transform duration-300"
+                style={{
+                  backgroundImage: 'url(/main1.png)',
+                  backgroundColor: '#faefdd',
+                }}
+              />
+            </a>
+            <a
+              className="flex-1 min-h-[14rem] md:min-h-[18rem] max-h-[18rem] md:max-h-[22rem] border border-gray-200 overflow-hidden block"
+              href="https://www.figma.com/design/5ZI5NQf5shzT8WQOldWLlR/UYIR-MVP-1-DEVELOPER-HANDOFF-?node-id=2-1251&p=f"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                className="w-full h-full bg-cover bg-center hover:scale-[1.02] transition-transform duration-300"
+                style={{
+                  backgroundImage: 'url(/main2.png)',
+                  backgroundColor: '#faefdd',
+                }}
+              />
+            </a>
+          </div>
           <div className="md:grid md:grid-cols-3 gap-4 place-items-center">
             <div className="md:w-80 md:h-60 w-60 h-50  border-1 mb-5 flex items-center justify-center">
              <a href="https://www.figma.com/design/vWHAEDuNj9wFVYyKk3MxNn/MAHINDRA?node-id=0-1&t=WrIVMl4uCNhzXquV-1" target="_blank"><div className="hover:scale-109 transition-transform duration-300 bg-cover md:h-50 md:w-70 h-43 w-50" style={{backgroundImage: 'url(/mahendra2.jpg)',backgroundColor: '#faefdd'}}></div></a> 
